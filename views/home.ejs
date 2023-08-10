@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap">
+
+  <title>Document</title>
+</head>
+<body>
+  <div class="mt-5 container header">
+    <div class="row">
+      <div class="col-md-6 mx-auto text-center">
+        <h1>Messi</h1>
+        <img style="height: 20rem;" src="https://static.globalnoticias.pt/oj/image.jpg?brand=OJ&type=generate&guid=77db20b1-cbca-403c-a561-1b00ed7960a0&w=735&h=490&t=20220921104603" class="img-fluid">
+        <form action="/messi" method="post">
+          <button type="submit" class="btn-lg btn btn-dark mt-3">Submit</button>
+        </form>
+      </div>
+      <div class="col-md-6 mx-auto text-center">
+        <h1>Ronaldo</h1>
+        <img style="height: 20rem;" src="https://www.butenunbinnen.de/bilder/fussball-portugal-ronaldo-100~_v-1280x720_c-1688569887210.jpg" class="img-fluid">
+        <form action="/ronaldo" method="post">
+          <button type="submit" class="btn-lg btn btn-dark mt-3">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <center>
+    <div class="text-center">
+      <% if (response === true) { %>
+        <h1>
+          Messi <%= messi %>
+          <% if (messi > ronaldo) { %>
+            🐐 <!-- Goat emoji -->
+          <% } %>
+        </h1>
+  
+        <h1>
+          Ronaldo <%= ronaldo %>
+          <% if (ronaldo > messi) { %>
+            🐐 <!-- Goat emoji -->
+          <% } %>
+        </h1>
+      <% } %>
+    </div>
+  </center>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
